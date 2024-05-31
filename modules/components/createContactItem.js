@@ -32,7 +32,13 @@ export const createContactItem = (initials, number, groupId, id) => {
 
     const groupName = storage.find((group) => group.id === groupId).groupName
 
-    handleEditContactSidebar(initials, number, groupId, groupName, id)
+    handleEditContactSidebar(
+      contactItemInitials.textContent,
+      contactNumber.textContent,
+      groupId,
+      groupName,
+      id
+    )
   })
 
   const deleteContactBtn = document.createElement('button')
