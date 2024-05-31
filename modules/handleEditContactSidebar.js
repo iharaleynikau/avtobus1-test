@@ -18,8 +18,7 @@ export const handleEditContactSidebar = (
   )
 
   closeEditContactSidebarBtn.addEventListener('click', () => {
-    const sidebar = document.querySelector('.active')
-    sidebar.classList.remove('active')
+    editContactSidebar.classList.remove('active')
     darkenBackground.style.display = 'none'
   })
 
