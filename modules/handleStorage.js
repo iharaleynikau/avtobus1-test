@@ -1,7 +1,10 @@
 class Storage {
   constructor(groupName) {
     this.groupName = groupName
-    localStorage.setItem(this.groupName, JSON.stringify([]))
+
+    if (!localStorage.getItem(this.groupName)) {
+      localStorage.setItem(this.groupName, JSON.stringify([]))
+    }
   }
 
   get() {
