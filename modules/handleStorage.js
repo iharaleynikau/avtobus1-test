@@ -1,6 +1,7 @@
 class Storage {
   constructor(groupName) {
     this.groupName = groupName
+    localStorage.setItem(this.groupName, JSON.stringify([]))
   }
 
   get() {
