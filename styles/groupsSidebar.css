@@ -1,0 +1,13 @@
+.sidebar__groups-list {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.sidebar__groups-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  animation: animateAppearance 0.5s;
+}
