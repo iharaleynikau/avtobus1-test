@@ -19,13 +19,13 @@ export const createSidebarGroupItem = (id, disabled = false, value = '') => {
   sidebarDeleteItemBtn.classList.add('item-btn')
 
   sidebarDeleteItemBtn.addEventListener('click', (event) => {
-    const currentGroupItem = event.currentTarget.closest('div')
-
-    currentGroupItem.remove()
+    groupSidebarItem.remove()
 
     const storage = groupsStorage.get()
 
-    if (storage.length) {
+    const isGroupItemInStorage = storage.find((group) => group.id === id)
+
+    if (isGroupItemInStorage) {
       const card = document
         .querySelector(`div[id="${id}"]`)
         .closest('.card-wrapper')
