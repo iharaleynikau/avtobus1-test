@@ -8,6 +8,4 @@ export const showEmptyListText = () => {
   } else {
     emptyListTextElement.classList.remove('display-none')
   }
-
-  console.log(emptyListTextElement)
 }

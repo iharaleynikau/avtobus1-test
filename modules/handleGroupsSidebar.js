@@ -91,7 +91,7 @@ export const handleGroupsSidebar = () => {
 
         contactsSidebarSelectGroup.appendChild(contactsSidebarOtionItem)
 
-        const groupListElement = document.querySelector('#accordion')
+        const groupListElement = document.querySelector('.contacts')
 
         groupListElement.appendChild(cardElement)
       }

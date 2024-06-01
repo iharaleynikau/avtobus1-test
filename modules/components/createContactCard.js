@@ -1,6 +1,6 @@
 import arrowSvg from '../../assets/arrow.svg'
 
-export const createContactCard = (groupName, id) => {
+export const createContactCard = (groupName, id, hasContacts = false) => {
   const cardWrapper = document.createElement('div')
   cardWrapper.classList.add('card-wrapper')
 
@@ -12,6 +12,7 @@ export const createContactCard = (groupName, id) => {
   const cardHeader = document.createElement('div')
   cardHeader.setAttribute('data-toggle', 'collapse')
   cardHeader.setAttribute('data-target', `#${id}`)
+  cardHeader.setAttribute('aria-expanded', 'true')
   cardHeader.classList.add('card-header')
 
   card.appendChild(cardHeader)
@@ -34,13 +35,16 @@ export const createContactCard = (groupName, id) => {
   collapse.classList.add('show')
   collapse.setAttribute('id', `${id}`)
   collapse.setAttribute('aria-labelledby', 'headingOne')
-  collapse.setAttribute('data-parent', '#accordion')
 
   const cardBody = document.createElement('div')
   cardBody.classList.add('card-body')
   cardBody.setAttribute('id', id)
 
   collapse.appendChild(cardBody)
+  cardHeader.addEventListener('click', () => {
+    cardHeading.classList.toggle('card-heading-unactive')
+    cardHeaderArrow.classList.toggle('active-card-arrow')
+  })
 
   card.appendChild(collapse)
 

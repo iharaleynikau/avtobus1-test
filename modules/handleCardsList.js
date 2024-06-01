@@ -3,7 +3,7 @@ import { createContactCard } from './components/createContactCard'
 import { groupsStorage } from './handleStorage'
 
 export const handleCardsList = () => {
-  const list = document.querySelector('#accordion')
+  const list = document.querySelector('.contacts')
 
   const storage = groupsStorage.get()
 
